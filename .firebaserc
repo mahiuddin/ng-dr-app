@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dr-jewel-apps": {
+      "hosting": {
+        "ng-dr-app": [
+          "dr-jewel-apps"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dr-jewel-apps"
+  }
+}
