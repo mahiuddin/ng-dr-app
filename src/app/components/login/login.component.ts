@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/@services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  
   form: any;
   constructor(
     private fb:FormBuilder,
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    debugger
     this.authService.LogOut().then((res) => {
       console.log(res);
     });
