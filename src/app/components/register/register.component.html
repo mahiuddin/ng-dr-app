@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="wrap">
+    <mat-grid-list cols="1" rowHeight="300px">
+        <mat-grid-tile>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="container">
+                    <h1>Registration Form</h1>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your name</mat-label>
+                        <input matInput placeholder="Mr Mahi" formControlName="name">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="sample@example.com" formControlName="email" required>
+                        <span class="error" *ngIf="form.get('email').touched && form.get('email').hasError('required')">Email is required</span>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password" formControlName="password" matInput required>
+                            <span class="error" *ngIf="form.get('password').touched && form.get('password').hasError('required')">Password is required</span>
+                    </mat-form-field>
+                    <div>
+                        <button class="mat-raised-button">Register</button>
+                    </div>
+                    <div>
+                        <a [routerLink]="['/login']" routerLinkActive="router-link-active">Registered?</a>
+                    </div>    
+                </div>
+            </form>
+        </mat-grid-tile>
+    </mat-grid-list>
+    </div>

@@ -20,6 +20,7 @@ import { LeftsidebarComponent } from './components/leftsidebar/leftsidebar.compo
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -32,7 +33,8 @@ import { RegisterComponent } from './components/register/register.component';
     LeftsidebarComponent,
     PortfolioComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

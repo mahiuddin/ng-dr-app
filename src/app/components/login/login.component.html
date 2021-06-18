@@ -1,21 +1,27 @@
-<mat-grid-list cols="1" rowHeight="200px">
+<div class="wrap">
+<mat-grid-list cols="1" rowHeight="300px">
     <mat-grid-tile>
         <form [formGroup]="form" (ngSubmit)="submit()">
             <div class="container">
-                <p class="mat-display-2">Login</p>
+                <h1>Login</h1>
                 <mat-form-field appearance="fill">
                     <mat-label>Enter your email</mat-label>
                     <input matInput placeholder="sample@example.com" formControlName="email" required>
                     <span class="error" *ngIf="form.get('email').touched && form.get('email').hasError('required')">Email is required</span>
                 </mat-form-field>
                 <mat-form-field appearance="fill">
-                    <mat-label>Input</mat-label>
-                    <input type="password" formControlName="password" matInput>
+                    <mat-label>Password</mat-label>
+                    <input type="password" formControlName="password" matInput required>
                         <span class="error" *ngIf="form.get('password').touched && form.get('password').hasError('required')">Password is required</span>
                 </mat-form-field>
-                <button class="mat-raised-button">Login</button>
-                <a [routerLink]="['register']" routerLinkActive="router-link-active">Not registered?</a>
+                <div>
+                    <button class="mat-raised-button">Login</button>
+                </div>
+                <div>
+                    <a [routerLink]="['/register']" routerLinkActive="router-link-active">Not registered?</a>
+                </div>    
             </div>
         </form>
     </mat-grid-tile>
 </mat-grid-list>
+</div>
