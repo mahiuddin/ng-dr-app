@@ -49,8 +49,6 @@ export class AuthService {
       },
       (error) => {
         alert(error.message);
-        this.router.navigate(['/login']);
-        //this.router.navigateByUrl('/login');
       }
     );
   }

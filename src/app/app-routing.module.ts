@@ -4,12 +4,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SearchappointmentComponent } from './components/searchappointment/searchappointment.component';
 
 
 const routes: Routes = [
   {path:"",component:PortfolioComponent},
   {path:"login", component:LoginComponent},
   {path:"dashboard",component:DashboardComponent},
+  {path:"search-appointment",component:SearchappointmentComponent},
   {path:"register",component:RegisterComponent}
 ];
 

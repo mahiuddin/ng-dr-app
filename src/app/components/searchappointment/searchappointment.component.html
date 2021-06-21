@@ -1,0 +1,22 @@
+<mat-grid-list cols="1" rowHeight="70px" position="center"> 
+    <mat-grid-tile>
+        <h2>Choose your appointment date</h2>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-form-field appearance="fill">
+            <mat-label>Select Date</mat-label>
+            <mat-select [(value)]="selectedDate" (selectionChange)="onOptionsSelected(selectedDate)">
+                <mat-option *ngFor="let appointmentDate of appointmentDates" [value]="appointmentDate.date">
+                {{appointmentDate.date}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-grid-tile>
+    <br>
+    <mat-grid-tile *ngFor="let appTime of appTime1">
+        <mat-card>{{appTime}}</mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+   

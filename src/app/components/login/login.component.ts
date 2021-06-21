@@ -28,9 +28,12 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       const user = this.form.value;
       this.authService.LogIn(user.email, user.password).then((res) => {
+        console.log(res);
         setTimeout(() => {
-          this.router.navigate(['/dashboard']);
+          //this.router.navigate(['/dashboard']);
         }, 100);
+      },(err)=>{
+        console.log("this is from error"+err);
       });
     } else {
       alert('Form invalid');

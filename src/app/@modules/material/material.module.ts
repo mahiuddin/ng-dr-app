@@ -8,6 +8,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 const MaterialComponents = [
@@ -19,7 +21,9 @@ const MaterialComponents = [
   MatGridListModule,
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatSelectModule,
+  MatDividerModule
 ]
 
 @NgModule({
