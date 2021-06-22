@@ -1,11 +1,4 @@
 <!-- Creates a layout with a left and right sidenav and implicit content. -->
 <app-header></app-header>
-<mat-drawer-container class="app-container">
-  <mat-drawer mode="side" opened>
-    <app-leftsidebar></app-leftsidebar>
-  </mat-drawer>
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+<router-outlet></router-outlet>
 <app-footer></app-footer>

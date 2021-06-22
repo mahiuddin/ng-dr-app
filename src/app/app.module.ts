@@ -20,10 +20,13 @@ import { LeftsidebarComponent } from './components/leftsidebar/leftsidebar.compo
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchappointmentComponent } from './components/searchappointment/searchappointment.component';
-
-
+import { HomeComponent } from './components/home/home.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { AdminleftsideComponent } from './components/admin/adminleftside/adminleftside.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { AdminpanelComponent } from './components/admin/adminpanel/adminpanel.component';
+import { AddappointmentComponent } from './components/admin/addappointment/addappointment.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +38,13 @@ import { SearchappointmentComponent } from './components/searchappointment/searc
     PortfolioComponent,
     LoginComponent,
     RegisterComponent,
+    SearchappointmentComponent,
+    HomeComponent,
+    PagenotfoundComponent,
     DashboardComponent,
-    SearchappointmentComponent
+    AdminleftsideComponent,
+    AdminpanelComponent,
+    AddappointmentComponent
   ],
   imports: [
     BrowserModule,

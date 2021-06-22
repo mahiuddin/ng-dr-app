@@ -46,9 +46,10 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password).then(
       (result) => {
         this.SetUserDate(result.user);
+        return {type:'success',result:result.user}
       },
       (error) => {
-        alert(error.message);
+        return {type:'error',message:error.message};        
       }
     );
   }
