@@ -9,6 +9,11 @@
                         <input matInput placeholder="Mr Mahi" formControlName="name">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
+                        <mat-label>Enter your mobile number</mat-label>
+                        <input matInput placeholder="0111111111" formControlName="mobile" required>
+                        <span class="error" *ngIf="form.get('mobile').touched && form.get('mobile').hasError('required')">Mobile is required</span>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
                         <mat-label>Enter your email</mat-label>
                         <input matInput placeholder="sample@example.com" formControlName="email" required>
                         <span class="error" *ngIf="form.get('email').touched && form.get('email').hasError('required')">Email is required</span>

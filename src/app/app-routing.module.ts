@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './@guards/auth.guard';
 import { AddappointmentComponent } from './components/admin/addappointment/addappointment.component';
 import { AdminpanelComponent } from './components/admin/adminpanel/adminpanel.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -29,7 +30,8 @@ const routes: Routes = [
     children:[
       {path:"",component:DashboardComponent},
       {path:"add-appointment",component:AddappointmentComponent}, 
-    ]
+    ],
+    canActivate: [AuthGuard]
   },
   {path:"**",component:PagenotfoundComponent}
 ];

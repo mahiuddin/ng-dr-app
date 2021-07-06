@@ -22,6 +22,7 @@ export class AuthService {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
+        // console.log("in auth state");
         this.storage.set('user', this.userData);
       } else {
         this.storage.set('user', null);
@@ -29,11 +30,13 @@ export class AuthService {
     });
   }
 
-  SignUp(name: string, email: string, password: string) {
+  SignUp(name: string, mobile: string, email: string, password: string) {
     return this.afAuth.createUserWithEmailAndPassword(email, password).then(
       (result: any) => {
         const user = { ...result.user };
         user.displayName = name;
+        user.mobile = mobile;
+        // console.log("in signup state");
         this.SetUserDate(user);
       },
       (error) => {
@@ -68,6 +71,8 @@ export class AuthService {
     );
     const userData: User = {
       uid: user.uid,
+      mobile: user.mobile?user.mobile:"",
+      role: "patient",
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
@@ -80,5 +85,9 @@ export class AuthService {
   get isLoggedIn(): boolean {
     const user = this.storage.get('user');
     return user !== null && user.uid ? true : false;
+  }
+  get getUserRole(): string {
+    const user = this.storage.get('user');
+    return user !== null && user.uid ? "true" : "false";
   }
 }

@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       name: ['', Validators.required],
+      mobile: ['', Validators.required],
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
@@ -26,7 +27,7 @@ export class RegisterComponent implements OnInit {
     if (this.form.valid) {
       const user = this.form.value;
       this.authService
-        .SignUp(user.name,user.email, user.password)
+        .SignUp(user.name,user.mobile,user.email, user.password)
         .then((res) => {
           alert("Registration successful");
           this.router.navigate(['/admin']);

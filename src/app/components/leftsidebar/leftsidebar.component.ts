@@ -13,8 +13,4 @@ export class LeftsidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout(){
-     this.authService.LogOut();
-  }
-
 }
